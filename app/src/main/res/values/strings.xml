@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">About Me</string>
     <string name="name">PULL YOUR NAME</string>
+    <string name="place_holder_edit_text">Your NickName</string>
+    <string name="button_done">Done</string>
     <string name="bio">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec aliquam metus.
         \nSuspendisse vulputate dolor neque, ac congue ante efficitur id.

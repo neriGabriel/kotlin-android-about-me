@@ -1,51 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              tools:context=".MainActivity"
-              android:orientation="vertical">
 
-    <TextView
-            android:id="@+id/nameTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            tools:text="@string/name"
-            android:paddingTop="@dimen/small_padding"
-            android:layout_marginTop="@dimen/small_margin"
-            android:fontFamily="sans-serif"
-            android:textSize="@dimen/text_size"/>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-            android:id="@+id/imgView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/btn_star_big_on"
-            android:layout_marginTop="@dimen/small_margin"
-
-    />
-
-    <ScrollView
-            android:id="@+id/scrollView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <!-- VINCULADO A DATACLASS -->
+    <data>
+        <variable name="myName"
+                  type="com.example.aboutme.MyName"/>
+    </data>
+    <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  tools:context=".MainActivity"
+                  android:orientation="vertical">
 
         <TextView
-                android:id="@+id/nameTextView2"
+                android:id="@+id/nameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:text="@string/bio"
+                android:text="@={myName.name}"
                 android:paddingTop="@dimen/small_padding"
                 android:layout_marginTop="@dimen/small_margin"
                 android:fontFamily="sans-serif"
+                android:textSize="@dimen/text_size"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textEditSuggestionItemLayout="@string/place_holder_edit_text"
+                android:id="@+id/editText"
+                android:fontFamily="sans-serif"
                 android:textSize="@dimen/text_size"
                 android:lineSpacingMultiplier="1.2"
+                android:textAlignment="center"
+                android:hint="@string/place_holder_edit_text"/>
+
+        <Button
+                android:id="@+id/button_done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_done"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/small_padding"
         />
 
-    </ScrollView>
-</LinearLayout>
+        <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_marginTop="@dimen/small_margin"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewName"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/text_size"
+                android:lineSpacingMultiplier="1.2"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/small_margin"
+                android:visibility="gone"
+                android:padding="@dimen/small_padding"
+                android:text="@={myName.nickname}"
+        />
+
+        <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/nameTextView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black"
+                    android:text="@string/bio"
+                    android:padding="@dimen/small_padding"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/text_size"
+                    android:lineSpacingMultiplier="1.2"
+            />
+
+        </ScrollView>
+    </LinearLayout>
+</layout>
