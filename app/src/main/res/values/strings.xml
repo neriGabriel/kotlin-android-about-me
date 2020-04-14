@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="name">PULL YOUR NAME</string>
+    <string name="bio">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec aliquam metus.
+        \nSuspendisse vulputate dolor neque, ac congue ante efficitur id.
+        \nIn mollis ullamcorper nibh, at luctus neque porta in. Aenean euismod tempor quam ut tristique.
+        \nIn blandit nisi vitae nisi placerat, quis fringilla urna faucibus. Ut posuere sed eros ut lobortis.
+        \nDuis faucibus, diam in ultrices gravida, nisi lacus accumsan nisi, quis blandit orci libero id dolor.
+        \nPhasellus nibh felis, porttitor non porta et, pulvinar at arcu.
+        \nAenean semper sem ante, vel tristique purus faucibus sit amet.
+        \nIn hac habitasse platea dictumst. Nulla facilisi. Sed dictum varius iaculis.
+        \nEtiam eu lorem libero. Sed congue sapien massa, id fringilla justo scelerisque nec.
+        \nNam sodales dui magna, sit amet consectetur arcu fermentum a. Aliquam interdum felis quis odio elementum, ac aliquet lacus convallis.
+        \nSed molestie massa quis cursus tincidunt. Cras sed augue rhoncus, bibendum neque ac, elementum diam. Nunc faucibus dui metus, viverra vehicula elit rhoncus eu.
+        \nNam ac fringilla erat, quis aliquam augue. Phasellus dictum dignissim nulla, et finibus erat. Praesent sit amet suscipit sem.</string>
+</resources>
